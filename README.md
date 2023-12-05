@@ -3,7 +3,7 @@ This is a supplement library for [adafruit / Adafruit_NeoPixel](https://github.c
 
 This library uses SPI MOSI instead of GPIO to control NeoPixel LED strap.
 
-## Badkground
+## Background
 
 I tried out [KotaMeiwa/nepils](https://github.com/KotaMeiwa/nepils) that is a SPRESENSE support of Adafruit_NeoPixel. It is very nice library but SPRESENSE behaves strangely. In multi-core programming, the GPIO signal timings fluctuate even though interrupts are disabled. I don't know why. I therefore decided to use SPI instead of GPIO.
 
