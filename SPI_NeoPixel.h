@@ -15,13 +15,16 @@ public:
 	uint8_t get_rgb_upper() { return m_rgb_max; }
 	void set_rgb_upper(uint8_t rgb_max) {  m_rgb_max = rgb_max; }
 
+public:
+	using Adafruit_NeoPixel::setPixelColor;
+
 public: //overwritten super class's method
 	void begin(void);
 	void show(void);
 
 protected: //diabled super class's method
 	void setPin(int16_t p){}
-//	void setPixelColor(uint16_t n, uint8_t r, uint8_t g, uint8_t b, uint8_t w){}
+	void setPixelColor(uint16_t n, uint8_t r, uint8_t g, uint8_t b, uint8_t w){}
 	void updateLength(uint16_t n){}
 	void updateType(neoPixelType t){}
 
